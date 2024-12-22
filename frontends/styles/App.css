@@ -1,0 +1,20 @@
+body {
+    background-color: #f7f7f7;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 20px auto;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #11151C;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
