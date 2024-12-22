@@ -1,27 +1,25 @@
-import React from "react";
-import { Link } from "react-router-dom";
+//Header.js
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/Header.css';
+import ToggleModeButton from './ToggleModeButton';  // Import the ToggleModeButton
 
-function Header() {
+const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container">
-        <Link className="navbar-brand" to="/">
-          My App
-        </Link>
-        <div className="navbar-nav">
-          <Link className="nav-item nav-link" to="/messages">
-            Messages
-          </Link>
-          <Link className="nav-item nav-link" to="/notifications">
-            Notifications
-          </Link>
-          <Link className="nav-item nav-link" to="/feedback">
-            Feedback
-          </Link>
-        </div>
+    <header className="header">
+      <div className="logo">
+        <h1>CR Assistant</h1>
       </div>
-    </nav>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/dashboard">Dashboard</Link>
+        <Link to="/messages">Messages</Link>
+        <Link to="/notifications">Notifications</Link>
+        <Link to="/feedback">Feedback</Link>
+      </nav>
+      <ToggleModeButton />  {/* Add the toggle button here */}
+    </header>
   );
-}
+};
 
-export default Header;
+export default Header;

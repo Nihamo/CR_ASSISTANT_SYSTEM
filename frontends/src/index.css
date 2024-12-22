@@ -1,13 +1,85 @@
+
+/* index.css */
+:root {
+  --bg-dark: #121212;
+  --bg-light: #ffffff;
+  --primary-blue: #1e90ff;
+  --secondary-blue: #3cb371;
+  --text-light: #e0e0e0;
+  --text-dark: #121212;
+  --header-bg-dark: #282c34;
+  --header-bg-light: #f1f1f1;
+}
+
+/* Default light theme */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header,
+footer {
+  background-color: var(--header-bg-dark);
+  padding: 20px;
+  color: var(--text-light);
+}
+
+body.dark-mode header, 
+body.dark-mode footer {
+  background-color: var(--header-bg-light);
+  color: var(--text-dark);
+}
+
+a {
+  color: var(--primary-blue);
+}
+
+a:hover {
+  color: var(--secondary-blue);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+button {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--secondary-blue);
+}
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+  .container {
+    padding: 10px;
+  }
 }

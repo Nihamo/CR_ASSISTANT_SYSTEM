@@ -1,0 +1,13 @@
+/* ToggleModeButton.css */
+.toggle-mode-btn {
+    background-color: #3cb371;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .toggle-mode-btn:hover {
+    background-color: #1e90ff;
+  }
